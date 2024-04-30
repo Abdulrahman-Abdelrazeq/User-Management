@@ -1,0 +1,27 @@
+.pagination span {
+}
+.prev-button {
+    border-radius: 8px 0 0 8px;
+}
+.next-button {
+    border-radius: 0 8px 8px 0;
+}
+
+.loading {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: calc(100vh + 160px);
+    background-color: white;
+    padding-top: 400px;
+    z-index: 5;
+}
+
+.search-container {
+    width: 150px;
+    transition: 0.3s;
+}
+.search-container:focus-within {
+    width: 200px;
+}

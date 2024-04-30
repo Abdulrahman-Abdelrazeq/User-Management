@@ -1,0 +1,28 @@
+<app-header [title]="'User Details'" style="z-index: 2; position: relative;"></app-header>
+<a routerLink="">
+    <div class="back-home position-absolute">
+        <i class="fa-solid fa-arrow-left"></i>
+    </div>
+</a>
+<div class="background"></div>
+<div class="image m-auto">
+    <div class="rgb"></div>
+    <img [src]="user.avatar" alt="">
+</div>
+<div class="text-info text-white">
+    <div class="info text-center">
+        <h4 class="text-info">ID</h4>
+        <h1 class="m-0">{{user.id}}</h1>
+        <h4 class="mt-3 text-info">Name</h4>
+        <h1 class="m-0">{{user.first_name}} {{user.last_name}}</h1>
+        <h4 class="mt-3 text-info">Email</h4>
+        <h1 class="m-0"><a href="mailto:{{user.email}}" target="_blank" class="text-decoration-none text-white">{{user.email}}</a></h1>
+    </div>
+    <div class="icon text-center py-5">
+        <a href="https://github.com/Abdulrahman-Abdelrazeq" target="_blank"><button type="button" class="btn btn-dark mx-4"><i class="fa-brands fa-github"></i></button></a>
+        <a href="https://www.linkedin.com/in/abdulrahman-ahmed-769765288/" target="_blank"><button type="button" class="btn btn-primary mx-4"><i class="fa-brands fa-linkedin-in"></i></button></a>
+    </div>
+</div>
+<div class="loading" *ngIf="isLoading">
+    <mat-spinner class="m-auto"></mat-spinner>
+</div>

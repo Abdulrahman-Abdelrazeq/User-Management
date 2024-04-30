@@ -1,0 +1,32 @@
+<!-- BOX -->
+<div class="flip-box rounded-4 position-relative" style="height: 360px;" (mouseover)="onHover()" (mouseout)="onMouseOut()"  (click)="onUserClick(user.id)">
+    <!-- START FLIP BOX FRONT -->
+    <div class="flip-box-front rounded-4"
+        style="background-image: url('{{user.avatar}}'); background-size: cover; background-position: center;">
+        <!-- MEMBER DETAILS -->
+        <div class="inner text-white">
+            <h3 class="flip-box-header text-uppercase ms-2 mt-2">{{user.first_name}} {{user.last_name}}</h3>
+            <p class="text-info ms-2">{{user.email}}</p>
+        </div>
+    </div>
+    <!-- END FLIP BOX FRONT -->
+
+    <!-- START FLIP BOX BACK -->
+    <div class="flip-box-back text-center position-absolute">
+        <div class="overlay"
+            style="background-image: url('{{user.avatar}}'); background-size: cover; background-position: center;">
+        </div>
+        <!-- MEMBER DETAILS -->
+        <div class="inner text-white">
+            <div class="info">
+                <h4 class="pt-5 text-info">ID</h4>
+                <h1 class="m-0">{{user.id}}</h1>
+                <h4 class="mt-3 text-info">Name</h4>
+                <h1 class="m-0">{{user.first_name}} {{user.last_name}}</h1>
+                <h4 class="mt-3 text-info">Email</h4>
+                <h3 class="m-0">{{user.email}}</h3>
+            </div>
+        </div>
+    </div>
+    <!-- END FLIP BOX BACK -->
+</div>

@@ -1,0 +1,51 @@
+h1 {
+    padding: 30px;
+}
+div:hover .animation {
+    animation: title 2s both ;
+}
+@keyframes title {
+    0% {
+        width: 100%;
+        margin: auto;
+        background-color: #232db5 !important;
+    }
+    50% {
+        word-spacing: 0;
+        width: 25%;
+        margin: auto;
+        background-color: #232db5 !important;
+        border-radius: 0;
+    }
+    100% {
+        width: 25%;
+        margin: auto;
+        word-spacing: 25px;
+        border-radius: 0 0 25px 25px;
+    }
+}
+
+div .remove-animation {
+    animation: remove 2s both ;
+}
+
+@keyframes remove {
+    0% {
+        width: 25%;
+        margin: auto;
+        word-spacing: 25px;
+        border-radius: 0 0 25px 25px;
+    }
+    50% {
+        word-spacing: 0;
+        width: 25%;
+        margin: auto;
+        background-color: #232db5 !important;
+        border-radius: 0;
+    }
+    100% {
+        width: 100%;
+        margin: auto;
+        background-color: #232db5 !important;
+    }
+}

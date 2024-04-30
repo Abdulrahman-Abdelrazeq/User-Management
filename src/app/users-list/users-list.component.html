@@ -1,0 +1,22 @@
+<app-header [title]="'Users List'"></app-header>
+<div class="search-container my-5 mx-auto">
+    <input type="text" class="form-control" [(ngModel)]="searchTerm" placeholder="Search by User ID" (input)="searchUsers()">
+  </div>
+<div class="user-list container">
+    <div class="row mt-5">
+        <div *ngFor="let user of displayedUsers??users" class="user-card col-4 mb-5 px-3">
+            <app-user-card [user]="user"></app-user-card>
+        </div>
+    </div>
+
+    <div class="pagination text-white py-5 justify-content-center">
+        <div>
+            <button class="prev-button" mat-raised-button (click)="prevPage()" [disabled]="currentPage === 1">Previous</button>
+            <span class="bg-secondary h-100 d-inline-block pt-2 px-2">Page {{ currentPage }}</span>
+            <button class="next-button" mat-raised-button (click)="nextPage()" [disabled]="currentPage === 2">Next</button>
+        </div>
+    </div>
+</div>
+<div class="loading" *ngIf="isLoading">
+    <mat-spinner class="m-auto"></mat-spinner>
+</div>
