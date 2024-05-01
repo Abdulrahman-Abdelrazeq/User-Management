@@ -4,7 +4,7 @@
   </div>
 <div class="user-list container">
     <div class="row mt-5">
-        <div *ngFor="let user of displayedUsers??users" class="user-card col-4 mb-5 px-3">
+        <div *ngFor="let user of displayedUsers??users" class="user-card col-12 col-md-6 col-xl-4  mb-5 px-3">
             <app-user-card [user]="user"></app-user-card>
         </div>
     </div>

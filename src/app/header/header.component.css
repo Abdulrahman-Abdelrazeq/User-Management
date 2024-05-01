@@ -1,6 +1,13 @@
 h1 {
     padding: 30px;
 }
+@media (max-width: 767px){
+    h1 {
+        padding: 5px;
+        font-size: 11px;
+    }
+}
+
 div:hover .animation {
     animation: title 2s both ;
 }
